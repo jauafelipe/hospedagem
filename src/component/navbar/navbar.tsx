@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router';
 
-const pages = ['Home', 'Verificar Cadastro', 'Sobre'];
+const pages = ['Home', 'Cadastro', 'Sobre'];
 const settings = ['Perfil', 'Registro e Consumo', 'Logout'];
 
 export const NavBar = () => {

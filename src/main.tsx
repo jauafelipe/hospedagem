@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
       <NavBar />
       <Routes>
         <Route path='/' element={<App />} />
-        <Route path='/verificar cadastro' element={<RegistroPage />} />
+        <Route path='/Cadastro' element={<RegistroPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
