@@ -58,7 +58,15 @@ export const Home = () => {
 
             <section className="card">
                 <div className="image-container">
-                    <p>Vista da serra</p>
+                    <p>Cardapios</p>
+                    <img src="arroz.jpg" alt="Vista da serra" />
+                </div>
+                <div className="image-container">
+                    <p>Cardapios</p>
+                    <img src="arroz.jpg" alt="Vista da serra" />
+                </div>
+                <div className="image-container">
+                    <p>Cardapios</p>
                     <img src="arroz.jpg" alt="Vista da serra" />
                 </div>
                 <div className="image-container">

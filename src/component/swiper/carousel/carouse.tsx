@@ -1,14 +1,13 @@
-// import Swiper core and required modules
+
+
 import { register } from "swiper/element-bundle"
 register()
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+
+
 import React from "react";
 const imgs = [{
     key: 1,
