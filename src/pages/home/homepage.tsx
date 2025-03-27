@@ -1,7 +1,7 @@
 
 import { Button } from '@mui/material'
-import { CardComponent } from '../../component/card/card'
 import './home.css'
+import { Carousel } from '../../component/swiper/carousel/carouse'
 
 const content = {
     h1: 'Pronto para sua proxima Hospedagem ?',
@@ -30,53 +30,64 @@ export const Home = () => {
                 </div>
             </main>
             <section className='flex justify-center frame-lorem '>
-                <h1 className='text-3xl font-bold '>PAISAGENS</h1>
+                <h1 className='text-3xl font-bold underline '>PAISAGENS</h1>
             </section>
 
 
 
             <section className="card">
-                <div className="">
-                    <CardComponent image='img1.jpg' />
-                </div> <div className="">
-                    <CardComponent image='img1.jpg' />
-                </div> <div className="">
-                    <CardComponent image='img1.jpg' />
+                <div className="image-container">
+                    <p>Vista da serra</p>
+                    <img src="img1.jpg" alt="Vista da serra" />
                 </div>
+                <div className="image-container">
+                    <p>Vista da serra</p>
+                    <img src="img2.webp" alt="Vista da serra" />
+                </div><div className="image-container">
+                    <p>Vista da serra</p>
+                    <img src="img1.jpg" alt="Vista da serra" />
+                </div>
+
             </section>
+
+            <section className='flex justify-center frame-lorem '>
+                <h1 className='text-3xl font-bold underline '>COMIDAS E LAZER</h1>
+            </section>
+
+
+
+            <section className="card">
+                <div className="image-container">
+                    <p>Vista da serra</p>
+                    <img src="arroz.jpg" alt="Vista da serra" />
+                </div>
+                <div className="image-container">
+                    <p>Vista da serra</p>
+                    <img src="lazer.jpg" alt="Vista da serra" />
+                </div>
+
+            </section>
+
+
+
+            <section className='more'>
+                <h1 className=''>E MUITO MAIS PARA VOCE E SUA FAMILIA</h1>
+                <Carousel />
+            </section>
+
+
+
+
+
+
 
 
             <section className='flex justify-center frame-lorem '>
-                <h1 className='text-3xl font-bold text-center '>REFEIÇOES TIPICAS</h1>
+                <button className="frame-button rounded-2xl bg-green-500 w-auto h-20  cursor-pointer underline text-2xl text-white border-b border-solid border-white ">
+                    Quero me hospedar
+                </button>
             </section>
 
-
-
-            <section className="card">
-                <div className="">
-                    <CardComponent image='img1.jpg' />
-                </div> <div className="">
-                    <CardComponent image='img1.jpg' />
-                </div> <div className="">
-                    <CardComponent image='img1.jpg' />
-                </div>
-            </section>
-
-
-            <section className='flex flex-col items-center justify-center frame-lorem '>
-                <h1 className='text-3xl font-bold '>MOMENTO LAZER</h1>
-                <p>Com jogos</p>
-            </section>
-
-            <section className="card">
-                <div className="">
-                    <CardComponent image='img1.jpg' />
-                </div> <div className="">
-                    <CardComponent image='img1.jpg' />
-                </div> <div className="">
-                    <CardComponent image='img1.jpg' />
-                </div>
-            </section>
 
             <footer className="h-full flex flex-col justify-center items-center bg-gray-900 text-white p-10">
                 <h2 className="text-2xl font-bold mb-4 text-center">
@@ -86,6 +97,9 @@ export const Home = () => {
                 <p className="text-gray-300 text-center max-w-lg mb-6">
                     Oferecemos conforto, tranquilidade e experiências inesquecíveis. Entre em contato e faça já sua reserva!
                 </p>
+
+
+
 
                 {/* Formulário de Contato */}
                 <form className="w-full max-w-md flex flex-col gap-4">
