@@ -2,6 +2,7 @@
 import { Button } from '@mui/material'
 import './home.css'
 import { Carousel } from '../../component/swiper/carousel/carouse'
+import { Link } from 'react-router'
 
 const content = {
     h1: 'Pronto para sua proxima Hospedagem ?',
@@ -16,9 +17,13 @@ export const Home = () => {
                     <div className="text-center md:text-left justify-center items-center max-sm:max-w-100">
                         <h1 className="text-4xl font-bold underline text-white">{content.h1}</h1>
                         <p className="text-lg text-white px-6 py-2 mx-auto ">{content.p}</p>
-                        <button className="bg-green-500 w-50 h-20  cursor-pointer underline text-2xl text-white border-b border-solid border-white ">
-                            Estou Pronto
-                        </button>
+                        <Link to={"/formulario"}>
+                            <button className="button bg-green-500 w-50 h-20  cursor-pointer underline text-2xl text-white border-b border-solid border-white ">
+                                Estou Pronto
+                            </button>
+
+                        </Link>
+
                     </div>
 
                     {/* Imagem Lateral */}
@@ -29,10 +34,14 @@ export const Home = () => {
                     />
                 </div>
             </main>
-            <section className='flex justify-center frame-lorem '>
-                <h1 className='text-3xl font-bold underline '>PAISAGENS</h1>
-            </section>
 
+
+
+
+
+            <section className='sec-title flex justify-center frame-lorem '>
+                <h1 className='text-3xl  underline '>Sobre Nos</h1>
+            </section>
 
 
             <section className="card">
@@ -40,46 +49,64 @@ export const Home = () => {
                     <p>Vista da serra</p>
                     <img src="img1.jpg" alt="Vista da serra" />
                 </div>
-                <div className="image-container">
-                    <p>Vista da serra</p>
-                    <img src="img2.webp" alt="Vista da serra" />
-                </div><div className="image-container">
-                    <p>Vista da serra</p>
-                    <img src="img1.jpg" alt="Vista da serra" />
+                <div className="text-container">
+                    <div className="text1">
+                        <h1>Lorem ipsum dolor.</h1>
+                    </div>
+                    <div className="text2">
+                        <h1>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Pariatur atque doloribus voluptatum, eos odit fugiat harum
+                            voluptas ratione sequi, sed, rerum ipsam numquam. Nam itaque,
+                            maxime rerum assumenda earum aspernatur.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Pariatur atque doloribus voluptatum, eos odit fugiat harum
+                            voluptas ratione sequi, sed, rerum ipsam numquam. Nam itaque,
+                            maxime rerum assumenda earum aspernatur.
+                        </h1>
+                    </div>
+                    <Link to={"/formulario"}>
+                        <button className="button bg-green-500 w-50 h-20  cursor-pointer underline text-2xl text-white border-b border-solid border-white ">
+                            quero conhecer
+                        </button>
+                    </Link>
                 </div>
-
             </section>
 
-            <section className='flex justify-center frame-lorem '>
-                <h1 className='text-3xl font-bold underline '>COMIDAS E LAZER</h1>
-            </section>
-
-
-
-            <section className="card">
-                <div className="image-container">
-                    <p>Cardapios</p>
-                    <img src="arroz.jpg" alt="Vista da serra" />
+            <section className='more-container'>
+                <h1>Lorem</h1>
+                <div className="more">
+                    <div className='image-container'>
+                        <p className="image-text">Lazer</p>
+                        <img src="lazer.jpg" alt="" />
+                    </div>
+                    <div className='image-container'>
+                        <p className="image-text">Natureza</p>
+                        <img src="lazer.jpg" alt="" />
+                    </div>
+                    <div className='image-container' >
+                        <p className="image-text">Paisagem</p>
+                        <img src="lazer.jpg" alt="" />
+                    </div>
+                    <div className='image-container'>
+                        <p className="image-text">Quartos</p>
+                        <img src="lazer.jpg" alt="" />
+                    </div>
+                    <div className='image-container' >
+                        <p className="image-text">Churrasco</p>
+                        <img src="lazer.jpg" alt="" />
+                    </div   >
+                    <div className='image-container'>
+                        <p className="image-text">e muito mais</p>
+                        <img src="lazer.jpg" alt="" />
+                    </div>
                 </div>
-                <div className="image-container">
-                    <p>Cardapios</p>
-                    <img src="arroz.jpg" alt="Vista da serra" />
-                </div>
-                <div className="image-container">
-                    <p>Cardapios</p>
-                    <img src="arroz.jpg" alt="Vista da serra" />
-                </div>
-                <div className="image-container">
-                    <p>Vista da serra</p>
-                    <img src="lazer.jpg" alt="Vista da serra" />
-                </div>
-
-            </section>
 
 
+            </section >
 
-            <section className='more'>
-                <h1 className=''>E MUITO MAIS PARA VOCE E SUA FAMILIA</h1>
+            <section>
+                <h1 className=''>NOSSA GALERIA</h1>
                 <Carousel />
             </section>
 

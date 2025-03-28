@@ -37,7 +37,7 @@ export const NavBar = () => {
     };
 
     return (
-        <AppBar position="static" color='transparent'>
+        <AppBar position="static" color="transparent">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
@@ -87,7 +87,9 @@ export const NavBar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                                    <Link to={page === 'Home' ? '/' : `/${page.toLowerCase()}`} style={{ textDecoration: 'none' }}>
+                                        <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                                    </Link>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -113,15 +115,14 @@ export const NavBar = () => {
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'black', display: 'block' }}
-                            >
-                                <Link to={page === 'Home' ? '/' : `/${page}`}>
+                            <Link key={page} to={page === 'Home' ? '/' : `/${page.toLowerCase()}`} style={{ textDecoration: 'none' }}>
+                                <Button
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'black', display: 'block' }}
+                                >
                                     {page}
-                                </Link>
-                            </Button>
+                                </Button>
+                            </Link>
                         ))}
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
@@ -148,7 +149,11 @@ export const NavBar = () => {
                         >
                             {settings.map((setting) => (
                                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+                                    <Link to={setting === 'Registro e Consumo' ? '/Registro e Consumo' : `/${setting.toLowerCase()}`} style={{ textDecoration: 'none' }}>
+                                        <Typography sx={{ textAlign: 'center' }}>
+                                            {setting}
+                                        </Typography>
+                                    </Link>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -157,4 +162,4 @@ export const NavBar = () => {
             </Container>
         </AppBar>
     );
-}
+};

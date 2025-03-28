@@ -1,11 +1,12 @@
 
 
+// import Swiper core and required modules
 import { register } from "swiper/element-bundle"
 register()
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
+
 
 
 import React from "react";
@@ -62,10 +63,9 @@ export const Carousel = () => {
 
             {imgs.map(i => (
                 <SwiperSlide key={i.key}>
-                    <img style={{ width: "100%", objectFit: "cover", height: "200px" }} src={i.laser} alt="" />
+                    <img style={{ width: "100%", objectFit: "cover", height: "200px", border: "solid 2px green" }} src={i.laser} alt="" />
                 </SwiperSlide>
             ))}
-            ...
         </Swiper>
     );
 };

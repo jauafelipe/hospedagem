@@ -4,7 +4,6 @@ import './index.css'
 import App from './App.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import { NavBar } from './component/navbar/navbar.tsx'
-import { RegistroPage } from './pages/registro/registro.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,7 +12,6 @@ createRoot(document.getElementById('root')!).render(
       <NavBar />
       <Routes>
         <Route path='/' element={<App />} />
-        <Route path='/Cadastro' element={<RegistroPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
