@@ -1,3 +1,6 @@
+#root {}
+
+
 .main-menu {
     background-image: url("floresta.jpg");
     background-repeat: no-repeat;
@@ -99,7 +102,6 @@
 }
 
 .more-container {
-    width: 1200px;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -116,8 +118,8 @@
 .more-container .more {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
+    gap: 10px;
 }
 
 
@@ -132,6 +134,7 @@
 }
 
 .more-container .more .image-container .image-text {
+    text-decoration: underline;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -154,14 +157,67 @@
     padding: 20px;
 }
 
-footer {
-    padding: 20px;
+.galeria {
+    text-align: center;
+    padding: 50px;
+    align-items: center;
 }
 
-footer form {
-    margin: 40px;
+.galeria .principal {
+    padding: 10px;
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #fff;
+    text-decoration: underline;
+    background-color: oklch(0.627 0.194 149.214);
 }
 
+.galeria h2 {
+    margin: 0 auto;
+    font-size: 20px;
+    max-width: 550px;
+}
+
+.galeria div {
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.contato {
+    border-radius: 20px;
+    color: white;
+    background-color: oklch(0.627 0.194 149.214);
+    text-align: center;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contato label {
+    margin: 10px;
+    color: white;
+}
+
+.contato input {
+    padding: 10px;
+    color: black;
+    background-color: #fff;
+}
+
+.contato input::placeholder {
+    text-align: center;
+}
+
+.contato button {
+    margin-top: 20px;
+}
 
 @media screen and (max-width:600px) {
     .card {

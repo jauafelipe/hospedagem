@@ -1,5 +1,4 @@
 
-import { Button } from '@mui/material'
 import './home.css'
 import { Carousel } from '../../component/swiper/carousel/carouse'
 import { Link } from 'react-router'
@@ -46,12 +45,12 @@ export const Home = () => {
 
             <section className="card">
                 <div className="image-container">
-                    <p>Vista da serra</p>
+                    <p className='text-3xl  underline'>Vista da serra</p>
                     <img src="img1.jpg" alt="Vista da serra" />
                 </div>
                 <div className="text-container">
                     <div className="text1">
-                        <h1>Lorem ipsum dolor.</h1>
+                        <h1 className='text-3xl  underline'>Lorem ipsum dolor.</h1>
                     </div>
                     <div className="text2">
                         <h1>
@@ -74,7 +73,7 @@ export const Home = () => {
             </section>
 
             <section className='more-container'>
-                <h1>Lorem</h1>
+                <h1 className=' text-3xl underline'>Lorem</h1>
                 <div className="more">
                     <div className='image-container'>
                         <p className="image-text">Lazer</p>
@@ -105,10 +104,19 @@ export const Home = () => {
 
             </section >
 
-            <section>
-                <h1 className=''>NOSSA GALERIA</h1>
-                <Carousel />
-            </section>
+            <section className='galeria'>
+                <h1 className='principal'>NOSSA GALERIA</h1>
+                <div>
+                    <h2>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, facere eaque numquam sed quod est corrupti impedit modi dolores minus culpa at similique sit voluptas ducimus ab. Officia, voluptates quis?
+                    </h2>
+                    <Carousel />
+                </div> <div>
+                    <Carousel />
+                </div> <div>
+                    <Carousel />
+                </div>
+            </section >
 
 
 
@@ -124,43 +132,27 @@ export const Home = () => {
             </section>
 
 
-            <footer className="h-full flex flex-col justify-center items-center bg-gray-900 text-white p-10">
-                <h2 className="text-2xl font-bold mb-4 text-center">
-                    Venha conhecer nossa hospedagem e lazer para você e sua família
-                </h2>
 
-                <p className="text-gray-300 text-center max-w-lg mb-6">
-                    Oferecemos conforto, tranquilidade e experiências inesquecíveis. Entre em contato e faça já sua reserva!
-                </p>
-
-
-
-
-                {/* Formulário de Contato */}
-                <form className="w-full max-w-md flex flex-col gap-4">
-                    <input
-                        type="text"
-                        placeholder="Seu Nome"
-                        className="p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-500"
-                    />
-                    <input
-                        type="email"
-                        placeholder="Seu E-mail"
-                        className="p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-500"
-                    />
-                    <textarea
-                        placeholder="Sua Mensagem"
-                        style={{ resize: "none" }}
-                        className="p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-500"
-                    ></textarea>
-                    <Button style={{ color: "white", backgroundColor: "oklch(0.627 0.194 149.214)" }} size="small" className="mt-6">
-                        Quero Conhecer
-                    </Button>
+            <section className='contato '>
+                <h2 className='text-xl font-semibold mb-4'>Entre em Contato Contato Para mais Informaçoes</h2>
+                <form className='space-y-3'>
+                    <div>
+                        <label className='block text-sm font-medium text-gray-700'>Nome</label>
+                        <input type='text' className='w-full p-2 border rounded-lg' placeholder='ex: joão da silva' required />
+                    </div>
+                    <div>
+                        <label className='block text-sm font-medium text-gray-700'>Número de Telefone</label>
+                        <input type='tel' className='w-full p-2 border rounded-lg' placeholder='(99) 99999-9999' required />
+                    </div>
+                    <div>
+                        <label className='block text-sm font-medium text-gray-700'>E-mail</label>
+                        <input type='email' className='w-full p-2 border rounded-lg' placeholder='seuemail@email.com' required />
+                    </div>
+                    <button className="frame-button rounded-2xl bg-green-500 w-auto h-20  cursor-pointer underline text-2xl text-white border-b border-solid border-white ">
+                        Enviar
+                    </button>
                 </form>
-
-                {/* Botão de Ação */}
-
-            </footer>
+            </section>
 
         </div >
     )

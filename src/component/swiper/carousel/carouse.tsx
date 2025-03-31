@@ -31,14 +31,16 @@ const imgs = [{
 },]
 
 export const Carousel = () => {
-    const [slidePrev, setSlidePrev] = React.useState(2)
+    const [slidePrev, setSlidePrev] = React.useState(4)
     React.useEffect(() => {
         function hanldeResize() {
-            if (window.innerWidth < 720) {
-                setSlidePrev(1)
-            } else {
-                setSlidePrev(2)
-            }
+            const windowWidth = window.innerWidth
+            if (windowWidth < 1920) { setSlidePrev(3) }
+            else setSlidePrev(4)
+            if (windowWidth < 800) { setSlidePrev(2) }
+            if (windowWidth < 600) { setSlidePrev(1) }
+
+
         }
         hanldeResize()
         window.addEventListener('resize', hanldeResize)
@@ -50,7 +52,7 @@ export const Carousel = () => {
         <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={10}
+            spaceBetween={4}
             slidesPerView={slidePrev}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
@@ -59,11 +61,19 @@ export const Carousel = () => {
             onSlideChange={() => console.log('slide change')
 
             }
+            autoplay={{ delay: 3000 }}
+            loop={true}
         >
 
             {imgs.map(i => (
-                <SwiperSlide key={i.key}>
-                    <img style={{ width: "100%", objectFit: "cover", height: "200px", border: "solid 2px green" }} src={i.laser} alt="" />
+                <SwiperSlide
+                    key={i.key}>
+                    <img style={{
+                        width: "500px",
+                        objectFit: "cover",
+                        height: "500px",
+                        border: "solid 2px green"
+                    }} src={i.laser} alt="" />
                 </SwiperSlide>
             ))}
         </Swiper>
